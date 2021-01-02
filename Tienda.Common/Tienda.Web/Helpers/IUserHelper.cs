@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Tienda.Web.Data.Entities;
+using Tienda.Web.Models;
 
 namespace Tienda.Web.Helpers
 {
@@ -18,6 +19,13 @@ namespace Tienda.Web.Helpers
         Task AddUserToRoleAsync(User user, string roleName);
 
         Task<bool> IsUserInRoleAsync(User user, string roleName);
+
+        Task<SignInResult> LoginAsync(LoginViewModel model);
+
+        Task LogoutAsync();
+
+        Task<SignInResult> ValidatePasswordAsync(User user, string password);
+
     }
 
 }
