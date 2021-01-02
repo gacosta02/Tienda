@@ -35,7 +35,7 @@ namespace Tienda.Common.Entities
         //TODO: Pending to put the correct paths
         [Display(Name = "Image")]
         public string ImageFullPath => ProductImages == null || ProductImages.Count == 0
-            ? $"https://localhost:443371/images/noimage.png"
+            ? $"https://localhost:44371/images/noimage.png"
             : ProductImages.FirstOrDefault().ImageFullPath;
     }
 
